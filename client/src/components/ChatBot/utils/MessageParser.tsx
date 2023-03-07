@@ -2,6 +2,7 @@ import React from "react";
 
 const MessageParser = ({ children, actions }: any) => {
   const parse = (message: any) => {
+    message = message.toLocaleLowerCase();
     if (message.includes("hola")) {
       actions.handleHello();
     } else if (
